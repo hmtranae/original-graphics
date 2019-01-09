@@ -29,7 +29,7 @@ class Contact extends Component {
             <h1 style={{ fontSize: '40px' }} className="ui header">
               Contact Us
               <div className="sub header" style={{ paddingTop: '20px' }}>
-                Questions, need some help or have feedback? Fill out the form below and we'll get back to you as soon as we can.
+                
               </div>
             </h1>
             <div className="ui message">
