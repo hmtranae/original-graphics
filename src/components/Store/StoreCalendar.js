@@ -68,6 +68,11 @@ class StoreCalendar extends Component {
       key: "christmas",
       value: "Christmas",
       text: "Christmas"
+    },
+    {
+      key: "custom",
+      value: "Custom",
+      text: "Custom"
     }
   ];
 
@@ -80,7 +85,6 @@ class StoreCalendar extends Component {
         >
           Original Graphics
         </div>
-
         <div className="ui vertical center aligned segment">
           <h1 style={{ fontSize: "40px" }} className="ui header">
             Calendar Options
@@ -89,7 +93,11 @@ class StoreCalendar extends Component {
 
         <div>
           <div className="ui large images">
-            <img className="ui image" alt="poster options" src="" />
+            <img
+              className="ui image"
+              alt="calendar options"
+              src="https://images.pexels.com/photos/908298/pexels-photo-908298.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+            />
           </div>
         </div>
 
@@ -132,6 +140,14 @@ class StoreCalendar extends Component {
               options={this.calendarThemeOptions}
               onChange={this.onDropdownInputChange}
             />
+            <div className="ui divider" />
+            <button
+              onClick={this.formSubmit}
+              style={{ paddingTop: "20px" }}
+              className="ui fluid primary huge button"
+            >
+              Order Now
+            </button>
           </div>
         </div>
       </div>

@@ -173,6 +173,14 @@ class StorePoster extends Component {
               options={this.posterMountOptions}
               onChange={this.onDropdownInputChange}
             />
+            <div className="ui divider" />
+            <button
+              onClick={this.formSubmit}
+              style={{ paddingTop: "20px" }}
+              className="ui fluid primary huge button"
+            >
+              Order Now
+            </button>
           </div>
         </div>
       </div>
