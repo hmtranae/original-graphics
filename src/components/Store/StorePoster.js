@@ -91,6 +91,7 @@ class StorePoster extends Component {
 
   render() {
     return (
+      <div>
       <div className="column" style={{ padding: "15px 5px 5px 5px" }}>
         <div
           style={{ fontSize: "50px" }}
@@ -103,6 +104,17 @@ class StorePoster extends Component {
             Poster Options
           </h1>
         </div>
+        </div>
+
+        <div>
+          <div className="ui padded vertical center aligned segment">
+            <h1 style={{ fontSize: "40px" }} className="ui header">
+            
+              <div className="ui sub header">
+                Please use the chart below to assist you in selecting your poster size.
+              </div>
+            </h1>
+          </div>
 
         <div>
           <div className="ui large images">
@@ -114,14 +126,7 @@ class StorePoster extends Component {
           </div>
         </div>
 
-        <div>
-          <strong>
-            <p>
-              Please use the chart above to assist you in selecting the
-              size/sizes of your poster.
-            </p>
-          </strong>
-        </div>
+        
         <div style={{ paddingBottom: "10px" }} className="ui form">
           <div className="field">
             <Dropdown
@@ -186,6 +191,7 @@ class StorePoster extends Component {
           </div>
         </div>
       </div>
+  </div>
     );
   }
 }

@@ -18,6 +18,17 @@ class Family extends Component {
             Family
           </h1>
         </div>
+
+        <div>
+          <div className="ui padded vertical center aligned segment">
+            <h1 style={{ fontSize: "40px" }} className="ui header">
+            
+              <div className="ui sub header">
+                Schedule an appointment with us today!
+              </div>
+            </h1>
+          </div>
+
         <div className="ui medium images">
           <img
             className="ui image"
@@ -74,6 +85,7 @@ class Family extends Component {
         >
           Book a Session
         </button>
+      </div>
       </div>
     );
   }
