@@ -92,106 +92,105 @@ class StorePoster extends Component {
   render() {
     return (
       <div>
-      <div className="column" style={{ padding: "15px 5px 5px 5px" }}>
-        <div
-          style={{ fontSize: "50px" }}
-          className="ui grey center aligned huge header"
-        >
-          Original Graphics
-        </div>
-        <div className="ui vertical center aligned segment">
-          <h1 style={{ fontSize: "40px" }} className="ui header">
-            Poster Options
-          </h1>
-        </div>
+        <div className="column" style={{ padding: "15px 5px 5px 5px" }}>
+          <div
+            style={{ fontSize: "50px" }}
+            className="ui grey center aligned huge header"
+          >
+            Original Graphics
+          </div>
+          <div className="ui vertical center aligned segment">
+            <h1 style={{ fontSize: "40px" }} className="ui header">
+              Poster Options
+            </h1>
+          </div>
         </div>
 
         <div>
           <div className="ui padded vertical center aligned segment">
             <h1 style={{ fontSize: "40px" }} className="ui header">
-            
               <div className="ui sub header">
-                Please use the chart below to assist you in selecting your poster size.
+                Please use the chart below to assist you in selecting your
+                poster size.
               </div>
             </h1>
           </div>
 
-        <div>
-          <div className="ui large images">
-            <img
-              className="ui image"
-              alt="poster options"
-              src="https://patentearth-misc.s3.amazonaws.com/images/print-sizes-5x.jpg"
-            />
+          <div>
+            <div className="ui large images">
+              <img
+                className="ui image"
+                alt="poster options"
+                src="https://patentearth-misc.s3.amazonaws.com/images/print-sizes-5x.jpg"
+              />
+            </div>
           </div>
-        </div>
 
-        
-        <div style={{ paddingBottom: "10px" }} className="ui form">
-          <div className="field">
-            <Dropdown
-              placeholder="Color"
-              fluid
-              name="test"
-              multiple
-              selection
-              options={this.posterFrameColorOptions}
-              onChange={this.onDropdownInputChange}
-            />
+          <div style={{ paddingBottom: "10px" }} className="ui form">
+            <div className="field">
+              <Dropdown
+                placeholder="Color"
+                fluid
+                name="test"
+                multiple
+                selection
+                options={this.posterFrameColorOptions}
+                onChange={this.onDropdownInputChange}
+              />
+            </div>
           </div>
-        </div>
 
-        <div style={{ paddingBottom: "10px" }} className="ui form">
-          <div className="field">
-            <Dropdown
-              placeholder="Size"
-              fluid
-              name="test"
-              multiple
-              selection
-              options={this.posterSizeOptions}
-              onChange={this.onDropdownInputChange}
-            />
+          <div style={{ paddingBottom: "10px" }} className="ui form">
+            <div className="field">
+              <Dropdown
+                placeholder="Size"
+                fluid
+                name="test"
+                multiple
+                selection
+                options={this.posterSizeOptions}
+                onChange={this.onDropdownInputChange}
+              />
+            </div>
           </div>
-        </div>
 
-        <div style={{ paddingBottom: "10px" }} className="ui form">
-          <div className="field">
-            <Dropdown
-              placeholder="Style"
-              fluid
-              name="test"
-              multiple
-              selection
-              options={this.posterFrameStyleOptions}
-              onChange={this.onDropdownInputChange}
-            />
+          <div style={{ paddingBottom: "10px" }} className="ui form">
+            <div className="field">
+              <Dropdown
+                placeholder="Style"
+                fluid
+                name="test"
+                multiple
+                selection
+                options={this.posterFrameStyleOptions}
+                onChange={this.onDropdownInputChange}
+              />
+            </div>
           </div>
-        </div>
 
-        <div style={{ paddingBottom: "10px" }} className="ui form">
-          <div className="field">
-            <Dropdown
-              placeholder="Mount (poster printed on rigid PVC board)"
-              fluid
-              name="test"
-              multiple
-              selection
-              options={this.posterMountOptions}
-              onChange={this.onDropdownInputChange}
-            />
-            <div className="ui divider" />
-            <button
-              onClick={this.formSubmit}
-              style={{ paddingTop: "20px" }}
-              className="ui fluid primary big button"
-            >
-              Order Now
-            </button>
+          <div style={{ paddingBottom: "10px" }} className="ui form">
+            <div className="field">
+              <Dropdown
+                placeholder="Mount (poster printed on rigid PVC board)"
+                fluid
+                name="test"
+                multiple
+                selection
+                options={this.posterMountOptions}
+                onChange={this.onDropdownInputChange}
+              />
+              <div className="ui divider" />
+              <button
+                onClick={this.formSubmit}
+                style={{ paddingTop: "20px" }}
+                className="ui fluid primary big button"
+              >
+                Order Now
+              </button>
+            </div>
           </div>
         </div>
       </div>
-  </div>
     );
   }
 }

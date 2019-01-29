@@ -78,6 +78,7 @@ class StoreCalendar extends Component {
 
   render() {
     return (
+      <div>
       <div className="column" style={{ padding: "15px 5px 5px 5px" }}>
         <div
           style={{ fontSize: "50px" }}
@@ -90,6 +91,17 @@ class StoreCalendar extends Component {
             Calendar Options
           </h1>
         </div>
+        </div>
+        
+
+        <div>
+          <div className="ui padded vertical center aligned segment">
+            <h1 style={{ fontSize: "40px" }} className="ui header">
+              <div className="ui sub header">
+                Select the options below to create your own unique theme or custom calendar.
+              </div>
+            </h1>
+          </div>
 
         <div>
           <div className="ui large images">
@@ -150,6 +162,7 @@ class StoreCalendar extends Component {
             </button>
           </div>
         </div>
+      </div>
       </div>
     );
   }
