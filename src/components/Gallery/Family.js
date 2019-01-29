@@ -18,6 +18,12 @@ class Family extends Component {
         </div>
 
         <div>
+          <strong>
+            <p>Schedule an appointment with us today!</p>
+          </strong>
+        </div>
+
+        <div>
           <div className="ui medium images">
             <img
               className="ui image"
@@ -44,16 +50,37 @@ class Family extends Component {
         </div>
 
         <div className="ui medium images">
-          <img className="ui image" alt="family vacation" src="https://www.palazzodelvicere.com/wp-content/uploads/2018/03/family-mob.jpg" />
+          <img
+            className="ui image"
+            alt="family vacation"
+            src="https://www.palazzodelvicere.com/wp-content/uploads/2018/03/family-mob.jpg"
+          />
         </div>
 
         <div className="ui medium images">
-          <img className="ui image" alt="a child's love" src="https://violencefreefamilies.org.au/web/wp-content/uploads/2015/08/father-and-daughter-1.jpg" />
+          <img
+            className="ui image"
+            alt="a child's love"
+            src="https://violencefreefamilies.org.au/web/wp-content/uploads/2015/08/father-and-daughter-1.jpg"
+          />
         </div>
 
         <div className="ui medium images">
-          <img className="ui image" alt="family beach" src="http://tadalafilforsale.net/data/media/54/57735623.jpg" />
+          <img
+            className="ui image"
+            alt="family beach"
+            src="http://tadalafilforsale.net/data/media/54/57735623.jpg"
+          />
         </div>
+
+        <div className="ui divider" />
+        <button
+          onClick={this.formSubmit}
+          style={{ paddingTop: "20px" }}
+          className="ui fluid primary big button"
+        >
+          Book a Session
+        </button>
       </div>
     );
   }

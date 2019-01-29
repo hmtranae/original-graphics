@@ -115,10 +115,12 @@ class StorePoster extends Component {
         </div>
 
         <div>
-          <p>
-            Please use the chart above to assist you in selecting the size/sizes
-            of your poster.
-          </p>
+          <strong>
+            <p>
+              Please use the chart above to assist you in selecting the
+              size/sizes of your poster.
+            </p>
+          </strong>
         </div>
         <div style={{ paddingBottom: "10px" }} className="ui form">
           <div className="field">
@@ -177,7 +179,7 @@ class StorePoster extends Component {
             <button
               onClick={this.formSubmit}
               style={{ paddingTop: "20px" }}
-              className="ui fluid primary huge button"
+              className="ui fluid primary big button"
             >
               Order Now
             </button>

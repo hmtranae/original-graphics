@@ -144,7 +144,7 @@ class StoreCalendar extends Component {
             <button
               onClick={this.formSubmit}
               style={{ paddingTop: "20px" }}
-              className="ui fluid primary huge button"
+              className="ui fluid primary big button"
             >
               Order Now
             </button>
