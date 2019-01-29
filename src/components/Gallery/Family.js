@@ -3,12 +3,14 @@ import React, { Component } from "react";
 class Family extends Component {
   render() {
     return (
-      <div className="column" style={{ padding: "15px 5px 5px 5px" }}>
-        <div
-          style={{ fontSize: "50px" }}
-          className="ui grey center aligned huge header"
-        >
-          Original Graphics
+      <div>
+        <div className="column" style={{ padding: "15px 5px 5px 5px" }}>
+          <div
+            style={{ fontSize: "50px" }}
+            className="ui grey center aligned huge header"
+          >
+            Original Graphics
+          </div>
         </div>
 
         <div className="ui vertical center aligned segment">
@@ -16,21 +18,12 @@ class Family extends Component {
             Family
           </h1>
         </div>
-
-        <div>
-          <strong>
-            <p>Schedule an appointment with us today!</p>
-          </strong>
-        </div>
-
-        <div>
-          <div className="ui medium images">
-            <img
-              className="ui image"
-              alt="family generations"
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTY859d2HZzcc_fO-hZ0Mf-FS_X1Rd0pls6kMOh2UqX20sJKVOzEA"
-            />
-          </div>
+        <div className="ui medium images">
+          <img
+            className="ui image"
+            alt="family generations"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTY859d2HZzcc_fO-hZ0Mf-FS_X1Rd0pls6kMOh2UqX20sJKVOzEA"
+          />
         </div>
 
         <div className="ui medium images">
