@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 class Wedding extends Component {
   render() {
@@ -86,14 +87,12 @@ class Wedding extends Component {
           />
         </div>
 
-        <div className="ui divider" />
-        <button
-          onClick={this.formSubmit}
-          style={{ paddingTop: "20px" }}
-          className="ui fluid primary big button"
-        >
-          Book a Session
-        </button>
+        <div>
+          <Link to="/contact" className="ui fluid huge primary button">
+            {" "}
+            Book a Session
+          </Link>
+        </div>
       </div>
     );
   }

@@ -77,9 +77,7 @@ class Landscape extends Component {
               />
             </div>
           </div>
-          </div>
-
-          
+        </div>
 
         <div>
           <Link to="/contact" className="ui fluid huge primary button">
