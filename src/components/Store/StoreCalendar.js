@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Dropdown } from "semantic-ui-react";
+import { Link } from "react-router-dom";
 
 class StoreCalendar extends Component {
   calendarTypeOptions = [
@@ -79,90 +80,87 @@ class StoreCalendar extends Component {
   render() {
     return (
       <div>
-      <div className="column" style={{ padding: "15px 5px 5px 5px" }}>
-        <div
-          style={{ fontSize: "50px" }}
-          className="ui grey center aligned huge header"
-        >
-          Original Graphics
+        <div className="column" style={{ padding: "15px 5px 5px 5px" }}>
+          <div
+            style={{ fontSize: "50px" }}
+            className="ui grey center aligned huge header"
+          >
+            Original Graphics
+          </div>
+          <div className="ui vertical center aligned segment">
+            <h1 style={{ fontSize: "40px" }} className="ui header">
+              Calendar Options
+            </h1>
+          </div>
         </div>
-        <div className="ui vertical center aligned segment">
-          <h1 style={{ fontSize: "40px" }} className="ui header">
-            Calendar Options
-          </h1>
-        </div>
-        </div>
-        
 
         <div>
           <div className="ui padded vertical center aligned segment">
             <h1 style={{ fontSize: "40px" }} className="ui header">
               <div className="ui sub header">
-                Select the options below to create your own unique theme or custom calendar.
+                Select the options below to create your own unique theme or
+                custom calendar.
               </div>
             </h1>
           </div>
 
-        <div>
-          <div className="ui large images">
-            <img
-              className="ui image"
-              alt="calendar options"
-              src="https://images.pexels.com/photos/908298/pexels-photo-908298.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-            />
+          <div>
+            <div className="ui large images">
+              <img
+                className="ui image"
+                alt="calendar options"
+                src="https://images.pexels.com/photos/908298/pexels-photo-908298.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+              />
+            </div>
           </div>
-        </div>
 
-        <div style={{ paddingBottom: "10px" }} className="ui form">
-          <div className="field">
-            <Dropdown
-              placeholder="Type"
-              fluid
-              name="test"
-              multiple
-              selection
-              options={this.calendarTypeOptions}
-              onChange={this.onDropdownInputChange}
-            />
+          <div style={{ paddingBottom: "10px" }} className="ui form">
+            <div className="field">
+              <Dropdown
+                placeholder="Type"
+                fluid
+                name="test"
+                multiple
+                selection
+                options={this.calendarTypeOptions}
+                onChange={this.onDropdownInputChange}
+              />
+            </div>
           </div>
-        </div>
 
-        <div style={{ paddingBottom: "10px" }} className="ui form">
-          <div className="field">
-            <Dropdown
-              placeholder="Size"
-              fluid
-              name="test"
-              multiple
-              selection
-              options={this.calendarSizeOptions}
-              onChange={this.onDropdownInputChange}
-            />
+          <div style={{ paddingBottom: "10px" }} className="ui form">
+            <div className="field">
+              <Dropdown
+                placeholder="Size"
+                fluid
+                name="test"
+                multiple
+                selection
+                options={this.calendarSizeOptions}
+                onChange={this.onDropdownInputChange}
+              />
+            </div>
           </div>
-        </div>
 
-        <div style={{ paddingBottom: "10px" }} className="ui form">
-          <div className="field">
-            <Dropdown
-              placeholder="Theme"
-              fluid
-              name="test"
-              multiple
-              selection
-              options={this.calendarThemeOptions}
-              onChange={this.onDropdownInputChange}
-            />
-            <div className="ui divider" />
-            <button
-              onClick={this.formSubmit}
-              style={{ paddingTop: "20px" }}
-              className="ui fluid primary big button"
-            >
-              Order Now
-            </button>
+          <div style={{ paddingBottom: "10px" }} className="ui form">
+            <div className="field">
+              <Dropdown
+                placeholder="Theme"
+                fluid
+                name="test"
+                multiple
+                selection
+                options={this.calendarThemeOptions}
+                onChange={this.onDropdownInputChange}
+              />
+
+              <Link to="/purchase" className="ui fluid huge primary button">
+                {" "}
+                Order Now
+              </Link>
+            </div>
           </div>
         </div>
-      </div>
       </div>
     );
   }

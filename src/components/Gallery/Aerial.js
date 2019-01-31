@@ -17,6 +17,14 @@ class Aerial extends Component {
         </div>
 
         <div>
+          <div className="ui padded vertical center aligned segment">
+            <h1 style={{ fontSize: "40px" }} className="ui header">
+              <div className="ui sub header">
+                Schedule an appointment with us today!
+              </div>
+            </h1>
+          </div>
+
           <div className="ui medium images">
             <img
               className="ui image"
@@ -65,6 +73,15 @@ class Aerial extends Component {
             src="https://st3.depositphotos.com/1843631/19217/v/380/depositphotos_192179086-stock-video-aerial-view-boston-light-lighthouse.jpg"
           />
         </div>
+
+        <div className="ui divider" />
+        <button
+          onClick={this.formSubmit}
+          style={{ paddingTop: "20px" }}
+          className="ui fluid primary big button"
+        >
+          Book a Session
+        </button>
       </div>
     );
   }

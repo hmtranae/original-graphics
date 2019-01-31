@@ -15,7 +15,16 @@ class Wedding extends Component {
             Wedding
           </h1>
         </div>
+
         <div>
+          <div className="ui padded vertical center aligned segment">
+            <h1 style={{ fontSize: "40px" }} className="ui header">
+              <div className="ui sub header">
+                Schedule an appointment with us today!
+              </div>
+            </h1>
+          </div>
+
           <div className="ui medium images">
             <img
               className="ui image"
@@ -76,6 +85,15 @@ class Wedding extends Component {
             src="http://tcartermusic.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/u/n/untitledmp_1.jpg"
           />
         </div>
+
+        <div className="ui divider" />
+        <button
+          onClick={this.formSubmit}
+          style={{ paddingTop: "20px" }}
+          className="ui fluid primary big button"
+        >
+          Book a Session
+        </button>
       </div>
     );
   }
