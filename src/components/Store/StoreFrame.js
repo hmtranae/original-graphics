@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Dropdown } from "semantic-ui-react";
+import { Link } from "react-router-dom";
 
 class StoreFrame extends Component {
   frameColorOptions = [
@@ -165,14 +166,11 @@ class StoreFrame extends Component {
               options={this.frameMountOptions}
               onChange={this.onDropdownInputChange}
             />
-            <div className="ui divider" />
-            <button
-              onClick={this.formSubmit}
-              style={{ paddingTop: "20px" }}
-              className="ui fluid primary big button"
-            >
+
+            <Link to="/contact" className="ui fluid huge primary button">
+              {" "}
               Order Now
-            </button>
+            </Link>
           </div>
         </div>
       </div>

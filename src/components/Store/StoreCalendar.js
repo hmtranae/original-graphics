@@ -154,7 +154,7 @@ class StoreCalendar extends Component {
                 onChange={this.onDropdownInputChange}
               />
 
-              <Link to="/purchase" className="ui fluid huge primary button">
+              <Link to="/contact" className="ui fluid huge primary button">
                 {" "}
                 Order Now
               </Link>
