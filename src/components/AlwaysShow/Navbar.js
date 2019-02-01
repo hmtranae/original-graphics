@@ -174,7 +174,7 @@ class Navbar extends Component {
                 </Link>
                 {this.state.isAdmin ? (
                   <Link
-                    to="user-data"
+                    to="/user-data"
                     style={{ marginLeft: "0.5em" }}
                     className="ui inverted button"
                   >
