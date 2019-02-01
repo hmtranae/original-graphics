@@ -1,10 +1,10 @@
-import React, { Component } from 'react'
-import { Modal, Menu, Dropdown } from 'semantic-ui-react'
-import { Link, withRouter } from 'react-router-dom'
-import axios from 'axios'
-import Login from '../User/Login'
-import SignUp from '../User/SignUp'
-import Purchase from '../User/Purchase'
+import React, { Component } from "react";
+import { Modal, Menu, Dropdown } from "semantic-ui-react";
+import { Link, withRouter } from "react-router-dom";
+import axios from "axios";
+import Login from "../User/Login";
+import SignUp from "../User/SignUp";
+import Purchase from "../User/Purchase";
 
 class Navbar extends Component {
   state = {
@@ -12,81 +12,84 @@ class Navbar extends Component {
     isLogin: false,
     isSignup: false,
     isPurchase: false,
-    isLoggedIn: false
-  }
+    isLoggedIn: false,
+    isAdmin: false
+  };
 
   // Will open up login modal if user goes to profile and is not logged in
   checkHistory = () => {
-    if(this.props.location.pathname === "/profile" && !this.state.isLoggedIn) {
+    if (this.props.location.pathname === "/profile" && !this.state.isLoggedIn) {
       this.setState({
         isLogin: true
-      })
+      });
     }
-  }
+  };
 
   componentDidMount = async () => {
     let res = await this.props.isLoggedIn();
     if (res.data) {
       this.setState({
-        isLoggedIn: true
-      })
+        isLoggedIn: true,
+        isAdmin: res.data.admin
+      });
     }
     this.checkHistory();
-  }
+  };
 
   componentWillReceiveProps = async () => {
     let res = await this.props.isLoggedIn();
     this.setState({
-      isLoggedIn: res.data !== 0
-    })
-    if (this.props.showLoginModal && this.props.location.pathname === '/') {
-      this.changeLogin(true)
+      isLoggedIn: res.data !== 0,
+      isAdmin: res.data.admin
+    });
+    if (this.props.showLoginModal && this.props.location.pathname === "/") {
+      this.changeLogin(true);
     }
-  }
+  };
 
-  closeLogin = () => this.setState({ isLogin: false })
+  closeLogin = () => this.setState({ isLogin: false });
 
-  closeSignup = () => this.setState({ isSignup: false })
+  closeSignup = () => this.setState({ isSignup: false });
 
-  closePurchase = () => this.setState({ isPurchase: false })
+  closePurchase = () => this.setState({ isPurchase: false });
 
   changePurchase = bol => {
     this.setState({
       isPurchase: bol
-    })
-  }
+    });
+  };
 
   changeLogin = bol => {
     this.setState({
       isLogin: bol
-    })
-  }
+    });
+  };
 
   changeSignup = bol => {
     this.setState({
       isSignup: bol
-    })
-  }
+    });
+  };
 
-  handleItemClick = (e, { name }) => this.setState({ activeItem: name })
+  handleItemClick = (e, { name }) => this.setState({ activeItem: name });
 
   onLogoutClick = async () => {
-    await axios.post('/api/logout')
+    await axios.post("/api/logout");
 
-    this.props.history.push('/')
+    this.props.history.push("/");
 
     this.setState({
       isLoggedIn: false
-    })
-  }
+    });
+  };
 
   render() {
-    const { activeItem } = this.state
+    const { activeItem } = this.state;
 
     return (
       <div
         className="ui inverted vertical center aligned segment"
-        style={{ padding: '1em 0em' }}
+        style={{ padding: "1em 0em" }}
       >
         <div className="ui container">
           <Menu secondary inverted pointing stackable>
@@ -94,21 +97,21 @@ class Navbar extends Component {
               as={Link}
               to="/"
               name="home"
-              active={activeItem === 'home'}
+              active={activeItem === "home"}
               onClick={this.handleItemClick}
             />
             <Menu.Item
               as={Link}
               to="/about-us"
               name="about-us"
-              active={activeItem === 'about-us'}
+              active={activeItem === "about-us"}
               onClick={this.handleItemClick}
             />
             <Menu.Item
               as={Link}
               to="/calendar"
               name="calendar"
-              active={activeItem === 'calendar'}
+              active={activeItem === "calendar"}
               onClick={this.handleItemClick}
             />
             <Dropdown
@@ -160,20 +163,26 @@ class Navbar extends Component {
               as={Link}
               to="/blog"
               name="blog"
-              active={activeItem === 'blog'}
+              active={activeItem === "blog"}
               onClick={this.handleItemClick}
             />
 
             {this.state.isLoggedIn ? (
               <div className="right item">
-                <Link
-                  to='/profile'
-                  className='ui inverted button'
-                >
+                <Link to="/profile" className="ui inverted button">
                   Profile
                 </Link>
+                {this.state.isAdmin ? (
+                  <Link
+                    to="user-data"
+                    style={{ marginLeft: "0.5em" }}
+                    className="ui inverted button"
+                  >
+                    User Data
+                  </Link>
+                ) : null}
                 <button
-                  style={{marginLeft: '0.5em'}}
+                  style={{ marginLeft: "0.5em" }}
                   onClick={this.onLogoutClick}
                   className="ui inverted button"
                 >
@@ -181,64 +190,64 @@ class Navbar extends Component {
                 </button>
               </div>
             ) : (
-                <div className="right item">
-                  <button
-                    onClick={this.changeLogin.bind(this, true)}
-                    className="ui inverted button"
-                  >
-                    Log in
+              <div className="right item">
+                <button
+                  onClick={this.changeLogin.bind(this, true)}
+                  className="ui inverted button"
+                >
+                  Log in
                 </button>
-                  <Modal
-                    open={this.state.isLogin}
-                    closeOnEscape={true}
-                    closeOnDimmerClick={true}
-                    onClose={this.closeLogin}
-                  >
-                    <Login
-                      changeLogin={this.changeLogin}
-                      changeSignup={this.changeSignup}
-                    />
-                  </Modal>
-                  <button
-                    style={{ marginLeft: '0.5em' }}
-                    onClick={this.changeSignup.bind(this, true)}
-                    className="ui inverted button"
-                  >
-                    Sign up
+                <Modal
+                  open={this.state.isLogin}
+                  closeOnEscape={true}
+                  closeOnDimmerClick={true}
+                  onClose={this.closeLogin}
+                >
+                  <Login
+                    changeLogin={this.changeLogin}
+                    changeSignup={this.changeSignup}
+                  />
+                </Modal>
+                <button
+                  style={{ marginLeft: "0.5em" }}
+                  onClick={this.changeSignup.bind(this, true)}
+                  className="ui inverted button"
+                >
+                  Sign up
                 </button>
-                  <Modal
-                    open={this.state.isSignup}
-                    closeOnEscape={true}
-                    closeOnDimmerClick={true}
-                    onClose={this.closeSignup}
-                  >
-                    <SignUp
-                      changeLogin={this.changeLogin}
-                      changeSignup={this.changeSignup}
-                    />
-                  </Modal>
-                  <button
-                    style={{ marginLeft: '0.5em' }}
-                    onClick={this.changePurchase.bind(this, true)}
-                    className="ui inverted button"
-                  >
-                    Purchase
+                <Modal
+                  open={this.state.isSignup}
+                  closeOnEscape={true}
+                  closeOnDimmerClick={true}
+                  onClose={this.closeSignup}
+                >
+                  <SignUp
+                    changeLogin={this.changeLogin}
+                    changeSignup={this.changeSignup}
+                  />
+                </Modal>
+                <button
+                  style={{ marginLeft: "0.5em" }}
+                  onClick={this.changePurchase.bind(this, true)}
+                  className="ui inverted button"
+                >
+                  Purchase
                 </button>
-                  <Modal
-                    open={this.state.isPurchase}
-                    closeOnEscape={true}
-                    closeOnDimmerClick={true}
-                    onClose={this.closePurchase}
-                  >
-                    <Purchase />
-                  </Modal>
-                </div>
-              )}
+                <Modal
+                  open={this.state.isPurchase}
+                  closeOnEscape={true}
+                  closeOnDimmerClick={true}
+                  onClose={this.closePurchase}
+                >
+                  <Purchase />
+                </Modal>
+              </div>
+            )}
           </Menu>
         </div>
       </div>
-    )
+    );
   }
 }
 
-export default withRouter(Navbar)
+export default withRouter(Navbar);
