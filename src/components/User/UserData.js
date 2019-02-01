@@ -14,6 +14,7 @@ export default class UserData extends Component {
   };
 
   render() {
+    console.log(this.state.users);
     const { users } = this.state;
     return (
       <div className="column" style={{ padding: "15px 5px 5px 5px" }}>
@@ -43,7 +44,9 @@ export default class UserData extends Component {
                   <div style={{ float: "right" }}>
                     <a
                       className="ui teal button"
-                      href={`mailto:${user.email}?subject=Mail from Original Graphics`}
+                      href={`mailto:${
+                        user.email
+                      }?subject=Mail from Original Graphics`}
                     >
                       Contact
                     </a>
@@ -70,6 +73,21 @@ export default class UserData extends Component {
                   <div style={{ marginTop: "20px " }} className="ui header">
                     Photo Services:
                   </div>
+
+                  <div className="ui divider" />
+
+                  <div style={{ marginTop: "20px " }} className="ui header">
+                    Interests:
+                    </div>
+
+                    <div className="ui divider" />
+                    {user.interests.map((interest, i) => {
+                      return (
+                        <div key={i}>
+                          {interest}
+                        </div>
+                      );
+                    })}
                 </div>
               </div>
             );
