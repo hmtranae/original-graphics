@@ -18,7 +18,10 @@ class Aerial extends Component {
         </div>
 
         <div>
-          <div className="ui padded vertical center aligned segment">
+          <div
+            style={{ marginBottom: "10px" }}
+            className="ui padded vertical center aligned segment"
+          >
             <h1 style={{ fontSize: "40px" }} className="ui header">
               <div className="ui sub header">
                 Schedule an appointment with us today!
@@ -26,53 +29,58 @@ class Aerial extends Component {
             </h1>
           </div>
 
-          <div className="ui medium images">
-            <img
-              className="ui image"
-              alt="prudential building"
-              src="https://cdn.onlyinyourstate.com/wp-content/uploads/2017/08/aer2.jpg"
-            />
+          <div className="ui container stackable two column centered grid">
+            <div style={{paddingLeft: '150px'}} className="column">
+              <div className="ui medium images">
+                <img
+                  className="ui image"
+                  alt="prudential building"
+                  src="https://cdn.onlyinyourstate.com/wp-content/uploads/2017/08/aer2.jpg"
+                />
+              </div>
+
+              <div className="ui medium images">
+                <img
+                  className="ui image"
+                  alt="cape coastline"
+                  src="http://tse4.mm.bing.net/th?id=OIP.ZxQtMk8Wz1VlkjQFLEAZqQHaE8"
+                />
+              </div>
+
+              <div className="ui medium images">
+                <img
+                  className="ui image"
+                  alt="maine"
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0wObhyRvZHzpTJvUN1Cdp_LBQh_Y9IwXWu8TmZKnYZLYqBMt5bg"
+                />
+              </div>
+            </div>
+            <div className="column">
+              <div className="ui medium images">
+                <img
+                  className="ui image"
+                  alt="boston skyline"
+                  src="https://i0.pickpik.com/photos/227/313/203/boston-massachusetts-skyline-downtown-preview.jpg"
+                />
+              </div>
+
+              <div className="ui medium images">
+                <img
+                  className="ui image"
+                  alt="city at night"
+                  src="https://cdn6.dissolve.com/p/D690_69_004/D690_69_004_1200.jpg"
+                />
+              </div>
+
+              <div className="ui medium images">
+                <img
+                  className="ui image"
+                  alt="lighthouse"
+                  src="https://st3.depositphotos.com/1843631/19217/v/380/depositphotos_192179086-stock-video-aerial-view-boston-light-lighthouse.jpg"
+                />
+              </div>
+            </div>
           </div>
-        </div>
-
-        <div className="ui medium images">
-          <img
-            className="ui image"
-            alt="cape coastline"
-            src="http://tse4.mm.bing.net/th?id=OIP.ZxQtMk8Wz1VlkjQFLEAZqQHaE8"
-          />
-        </div>
-
-        <div className="ui medium images">
-          <img
-            className="ui image"
-            alt="maine"
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0wObhyRvZHzpTJvUN1Cdp_LBQh_Y9IwXWu8TmZKnYZLYqBMt5bg"
-          />
-        </div>
-
-        <div className="ui medium images">
-          <img
-            className="ui image"
-            alt="boston skyline"
-            src="https://i0.pickpik.com/photos/227/313/203/boston-massachusetts-skyline-downtown-preview.jpg"
-          />
-        </div>
-
-        <div className="ui medium images">
-          <img
-            className="ui image"
-            alt="city at night"
-            src="https://cdn6.dissolve.com/p/D690_69_004/D690_69_004_1200.jpg"
-          />
-        </div>
-
-        <div className="ui medium images">
-          <img
-            className="ui image"
-            alt="lighthouse"
-            src="https://st3.depositphotos.com/1843631/19217/v/380/depositphotos_192179086-stock-video-aerial-view-boston-light-lighthouse.jpg"
-          />
         </div>
 
         <div>
