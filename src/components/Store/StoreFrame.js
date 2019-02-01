@@ -92,85 +92,99 @@ class StoreFrame extends Component {
 
   render() {
     return (
-      <div className="column" style={{ padding: "15px 5px 5px 5px" }}>
-        <div
-          style={{ fontSize: "50px" }}
-          className="ui grey center aligned huge header"
-        >
-          Original Graphics
+      <div>
+        <div className="column" style={{ padding: "15px 5px 5px 5px" }}>
+          <div
+            style={{ fontSize: "50px" }}
+            className="ui grey center aligned huge header"
+          >
+            Original Graphics
+          </div>
+          <div className="ui vertical center aligned segment">
+            <h1 style={{ fontSize: "40px" }} className="ui header">
+              Picture Frame Options
+            </h1>
+          </div>
         </div>
-        <div className="ui vertical center aligned segment">
-          <h1 style={{ fontSize: "40px" }} className="ui header">
-            Picture Frame Options
-          </h1>
-        </div>
+
         <div>
-          <div className="ui large images">
-            <img
-              className="ui image"
-              alt="frame options"
-              src="https://3.bp.blogspot.com/-Gcs5-tXif0k/VeTt30iVsCI/AAAAAAAAE8Y/ZBULPrU6cPQ/s320/Common-Picture-Frame-Graphic.jpg"
-            />
+          <div className="ui padded vertical center aligned segment">
+            <h1 style={{ fontSize: "40px" }} className="ui header">
+              <div className="ui sub header">
+                Our frame size option samples are listed below.
+                Please select your size/sizes.
+              </div>
+            </h1>
           </div>
-        </div>
-        <div style={{ paddingBottom: "10px" }} className="ui form">
-          <div className="field">
-            <Dropdown
-              placeholder="Color"
-              fluid
-              name="test"
-              multiple
-              selection
-              options={this.frameColorOptions}
-              onChange={this.onDropdownInputChange}
-            />
+          <div>
+            <div className="ui large images">
+              <img
+                className="ui image"
+                alt="frame options"
+                src="https://3.bp.blogspot.com/-Gcs5-tXif0k/VeTt30iVsCI/AAAAAAAAE8Y/ZBULPrU6cPQ/s320/Common-Picture-Frame-Graphic.jpg"
+              />
+            </div>
           </div>
-        </div>
 
-        <div style={{ paddingBottom: "10px" }} className="ui form">
-          <div className="field">
-            <Dropdown
-              placeholder="Size"
-              fluid
-              name="test"
-              multiple
-              selection
-              options={this.frameSizeOptions}
-              onChange={this.onDropdownInputChange}
-            />
+          <div style={{ paddingBottom: "10px" }} className="ui form">
+            <div className="field">
+              <Dropdown
+                placeholder="Color"
+                fluid
+                name="test"
+                multiple
+                selection
+                options={this.frameColorOptions}
+                onChange={this.onDropdownInputChange}
+              />
+            </div>
           </div>
-        </div>
 
-        <div style={{ paddingBottom: "10px" }} className="ui form">
-          <div className="field">
-            <Dropdown
-              placeholder="Style"
-              fluid
-              name="test"
-              multiple
-              selection
-              options={this.frameStyleOptions}
-              onChange={this.onDropdownInputChange}
-            />
+          <div style={{ paddingBottom: "10px" }} className="ui form">
+            <div className="field">
+              <Dropdown
+                placeholder="Size"
+                fluid
+                name="test"
+                multiple
+                selection
+                options={this.frameSizeOptions}
+                onChange={this.onDropdownInputChange}
+              />
+            </div>
           </div>
-        </div>
 
-        <div style={{ paddingBottom: "10px" }} className="ui form">
-          <div className="field">
-            <Dropdown
-              placeholder="Mount"
-              fluid
-              name="test"
-              multiple
-              selection
-              options={this.frameMountOptions}
-              onChange={this.onDropdownInputChange}
-            />
+          <div style={{ paddingBottom: "10px" }} className="ui form">
+            <div className="field">
+              <Dropdown
+                placeholder="Style"
+                fluid
+                name="test"
+                multiple
+                selection
+                options={this.frameStyleOptions}
+                onChange={this.onDropdownInputChange}
+              />
+            </div>
+          </div>
 
-            <Link to="/contact" className="ui fluid huge primary button">
-              {" "}
-              Order Now
-            </Link>
+          <div style={{ paddingBottom: "10px" }} className="ui form">
+            <div className="field">
+              <Dropdown
+                placeholder="Mount"
+                fluid
+                name="test"
+                multiple
+                selection
+                options={this.frameMountOptions}
+                onChange={this.onDropdownInputChange}
+              />
+
+              <Link to="/contact" className="ui fluid huge primary button">
+                {" "}
+                Order Now
+              </Link>
+            </div>
           </div>
         </div>
       </div>

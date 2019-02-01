@@ -140,7 +140,7 @@ class StoreCard extends Component {
               <img
                 className="ui image"
                 alt="card options"
-                src="https://images.pexels.com/photos/908298/pexels-photo-908298.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                src="https://pc-alc.imgix.net/alc/2018/11/06/19/54/29/35eff645-da36-406a-998d-6c1feaab84b6/hero_55-width_holiday_444444_v2.jpg?auto=format&ch=Width&dpr=2.63&fit=crop&h=310&ixjsv=1.2.0&q=38&w=420"
               />
             </div>
           </div>
