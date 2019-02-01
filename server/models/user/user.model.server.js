@@ -13,6 +13,7 @@ UserModel.populateClassesAndReminders = populateClassesAndReminders;
 UserModel.addInterest = addInterest;
 UserModel.deleteInterest = deleteInterest;
 UserModel.clearAllInterests = clearAllInterests;
+UserModel.findAllUserInfo = findAllUserInfo;
 
 function addInterest(uid, interest) {
   return UserModel.updateOne(
@@ -49,9 +50,18 @@ function findUserByCredentials(username, password) {
 }
 
 function findUsers() {
-  return UserModel.find()
+  return UserModel.find( { admin: false } )
     .sort({ firstName: 1 })
     .select("-password");
+}
+
+function findAllUserInfo() {
+  return UserModel.find( { admin: false } )
+  .sort({ firstName: 1 })
+  .select("-password")
+  .populate('classes')
+  .populate('reminders')
+  .exec();
 }
 
 function findUserByUsername(username) {

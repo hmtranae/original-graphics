@@ -10,6 +10,8 @@ module.exports = function (app) {
     app.post('/api/register', register);
     app.get('/api/user/id', findUserById);
     app.get('/api/user', findUser);
+    app.get('/api/users', findAllUsers);
+    app.get('/api/allUserInfo', getAllUserInfo);
     app.post('/api/login', passport.authenticate('local'), login);
     app.post("/api/logout", logout);
     app.post("/api/loggedIn", loggedIn);
@@ -18,6 +20,16 @@ module.exports = function (app) {
     app.put('/api/interests/add', addInterest);
     app.put('/api/interests/remove', deleteInterest);
     app.put('/api/interests/clearAll', clearAllInterests);
+
+    async function getAllUserInfo(req, res) {
+        const data = await userModel.findAllUserInfo();
+        res.json(data);
+    }
+
+    async function findAllUsers(req, res) {
+        const data = await userModel.findUsers();
+        res.json(data);
+    }
 
     async function addInterest(req, res) {
         const uid = req.query['uid'];
