@@ -41,7 +41,9 @@ class ClassCalendar extends Component {
 
   componentDidMount = async () => {
     const date = formatDateString(new Date());
+    console.log(date)
     let res = await axios.get(`/api/class/date?date=${date}`);
+    console.log(res)
     this.setState({
       classes: res.data
     });
@@ -354,7 +356,7 @@ class ClassCalendar extends Component {
                         {this.state.isLoggedIn && this.state.user.admin ? (
                           <div
                             onClick={this.deleteClass.bind(null, course)}
-                            className="ui large teal button"
+                            className="ui large red button"
                           >
                             Delete Class
                           </div>
@@ -378,7 +380,7 @@ class ClassCalendar extends Component {
 
 const formatDateString = date => {
   if (date.getMonth() < 10) {
-    return `${date.getDate()}-0${date.getMonth() + 1}-${date.getFullYear()}`;
+    return `0${date.getDate()}-0${date.getMonth() + 1}-${date.getFullYear()}`;
   } else {
     return `${date.getDate()}-${date.getMonth() + 1}-${date.getFullYear()}`;
   }
