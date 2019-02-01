@@ -17,74 +17,68 @@ class Wedding extends Component {
           </h1>
         </div>
 
-        <div>
-          <div className="ui padded vertical center aligned segment">
-            <h1 style={{ fontSize: "40px" }} className="ui header">
-              <div className="ui sub header">
-                Schedule an appointment with us today!
-              </div>
-            </h1>
+        <div
+          style={{ marginBottom: "10px" }}
+          className="ui padded vertical center aligned segment"
+        >
+          <h1 style={{ fontSize: "40px" }} className="ui header">
+            <div className="ui sub header">
+              Schedule an appointment with us today!
+            </div>
+          </h1>
+        </div>
+
+        <div className="ui container stackable two column centered grid">
+          <div style={{ paddingLeft: "150px" }} className="column">
+            <div className="ui medium images">
+              <img
+                className="ui image"
+                alt="the big day"
+                src="https://cdn.essensedesigns.com/wp-content/uploads/2018/05/D2457-1-530x845.jpg"
+              />
+            </div>
+
+            <div className="ui medium images">
+              <img
+                className="ui image"
+                alt="wedding fun"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcoVOep2vynDDX18Bi60hI_uu74X0RVXMpWLoEexacGGXxCl1VXw"
+              />
+            </div>
+
+            <div className="ui medium images">
+              <img
+                className="ui image"
+                alt="the couple landscape"
+                src="http://www.webdesignjoy.com/wp-content/uploads/2017/09/wedding-Photography-17.jpg"
+              />
+            </div>
           </div>
+          <div className="column">
+            <div className="ui medium images">
+              <img
+                className="ui image"
+                alt="blushing bride"
+                src="https://media-api.xogrp.com/images/609cc936-26c5-4a64-a4d9-3983adfe8a22~rs_400.300.fit"
+              />
+            </div>
 
-          <div className="ui medium images">
-            <img
-              className="ui image"
-              alt="the big day"
-              src="https://cdn.essensedesigns.com/wp-content/uploads/2018/05/D2457-1-530x845.jpg"
-            />
+            <div className="ui medium images">
+              <img
+                className="ui image"
+                alt="the bride and maids"
+                src="https://0.dkphoto.ie/wp-content/uploads/2018/08/stress-free-weddingss.jpg"
+              />
+            </div>
+
+            <div className="ui medium images">
+              <img
+                className="ui image"
+                alt="bride with baby breath"
+                src="http://tcartermusic.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/u/n/untitledmp_1.jpg"
+              />
+            </div>
           </div>
-        </div>
-
-        <div className="ui medium images">
-          <img
-            className="ui image"
-            alt="wedding fun"
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcoVOep2vynDDX18Bi60hI_uu74X0RVXMpWLoEexacGGXxCl1VXw"
-          />
-        </div>
-
-        <div
-          className="ui medium images
-        "
-        >
-          <img
-            className="ui image"
-            alt="the couple landscape"
-            src="http://www.webdesignjoy.com/wp-content/uploads/2017/09/wedding-Photography-17.jpg"
-          />
-        </div>
-
-        <div
-          className="ui medium images
-"
-        >
-          <img
-            className="ui image"
-            alt="blushing bride"
-            src="https://media-api.xogrp.com/images/609cc936-26c5-4a64-a4d9-3983adfe8a22~rs_400.300.fit"
-          />
-        </div>
-
-        <div
-          className="ui medium images
-        "
-        >
-          <img
-            className="ui image"
-            alt="the bride and maids"
-            src="https://0.dkphoto.ie/wp-content/uploads/2018/08/stress-free-weddingss.jpg"
-          />
-        </div>
-
-        <div
-          className="ui medium images
-        "
-        >
-          <img
-            className="ui image"
-            alt="bride with baby breath"
-            src="http://tcartermusic.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/u/n/untitledmp_1.jpg"
-          />
         </div>
 
         <div>
