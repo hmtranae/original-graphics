@@ -111,8 +111,8 @@ class StoreFrame extends Component {
           <div className="ui padded vertical center aligned segment">
             <h1 style={{ fontSize: "40px" }} className="ui header">
               <div className="ui sub header">
-                Our frame size option samples are listed below.
-                Please select your size/sizes.
+                Our frame size option samples are listed below. Please select
+                your size/sizes.
               </div>
             </h1>
           </div>
@@ -180,7 +180,7 @@ class StoreFrame extends Component {
                 onChange={this.onDropdownInputChange}
               />
 
-              <Link to="/contact" className="ui fluid huge primary button">
+              <Link to="/contact" className="ui fluid big primary button">
                 {" "}
                 Order Now
               </Link>

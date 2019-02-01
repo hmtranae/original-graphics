@@ -181,7 +181,7 @@ class StorePoster extends Component {
                 onChange={this.onDropdownInputChange}
               />
 
-              <Link to="/contact" className="ui fluid huge primary button">
+              <Link to="/contact" className="ui fluid big primary button">
                 {" "}
                 Order Now
               </Link>
