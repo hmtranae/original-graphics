@@ -10,6 +10,7 @@ import ProfileInput from './User/ProfileInput'
 import Profile from './User/Profile'
 import ForgotUsername from './User/ForgotUsername'
 import ForgotPassword from './User/ForgotPassword'
+import UserData from './User/UserData'
 
 import GalleryList from './Gallery/GalleryList'
 import Aerial from './Gallery/Aerial'
@@ -103,6 +104,7 @@ class App extends Component {
                 <Profile {...props} isLoggedIn={this.isLoggedIn} />
               )}
             />
+            <Route path='/user-data' exact component={UserData} />
             <Route path="/forgot-username" exact component={ForgotUsername} />
             <Route path="/forgot-password" exact component={ForgotPassword} />
           </Switch>
