@@ -79,7 +79,7 @@ class Family extends Component {
         </div>
 
         <div>
-          <Link to="/contact" className="ui fluid huge primary button">
+          <Link to="/contact" className="ui fluid big primary button">
             {" "}
             Book a Session
           </Link>
